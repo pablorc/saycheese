@@ -1,3 +1,4 @@
-import button;
+import console_view;
 
-button.Button().press();
+#button.Button().press();
+console_view.ConsoleView().run();

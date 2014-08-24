@@ -2,6 +2,7 @@ import camera;
 
 class Button:
   def press(self):
-    camera.Camera().take_photo();
+    new_photo = camera.Camera().take_photo();
+    cmd = "fbi " + new_photo
 
 

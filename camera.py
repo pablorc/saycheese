@@ -1,4 +1,5 @@
-import time; import picamera;
+import time; 
+import picamera;
 
 class Camera:
 
@@ -7,9 +8,13 @@ class Camera:
 
   def take_photo(self):
     print("Taking photo");
+    filename = self.get_rand_filename();
     with picamera.PiCamera() as camera:
+      camera.start_preview();
       time.sleep(5);
-      camera.capture(self.get_rand_filename());
       camera.stop_preview();
+      camera.capture(filename);
     print("Done");
+    return filename;
+
 
